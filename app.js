@@ -30,7 +30,8 @@ app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors({
-  origin: 'https://harmonious-faloodeh-3b7b17.netlify.app/'
+  origin: 'https://harmonious-faloodeh-3b7b17.netlify.app/',
+   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
